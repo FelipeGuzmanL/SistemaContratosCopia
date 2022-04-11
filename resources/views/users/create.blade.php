@@ -13,6 +13,11 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
+                                <div class="col-12 text-right">
+                                    <a href="{{ route('users.index') }}" class="btn btn-sm btn-danger">Volver</a>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label for="name" class="col-sm-2 col-form-label">Nombre</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" name="name" placeholder="Ingrese el nombre" autofocus>

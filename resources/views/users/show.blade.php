@@ -11,6 +11,11 @@
                        </div>
                        <!--Body-->
                        <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 text-right">
+                                <a href="{{ route('users.index') }}" class="btn btn-sm btn-danger">Volver</a>
+                            </div>
+                        </div>
                            <div class="row">
                                <div class="col-md-4">
                                    <div class="card card-user">
@@ -24,7 +29,7 @@
                                                    <p class="description">
                                                    {{ $user->rut}}  <br>
                                                    {{ $user->email}}  <br>
-                                                   {{ $user->created_at}}  <br> 
+                                                   {{ $user->created_at}}  <br>
                                                    </p>
                                                </div>
                                         </p>

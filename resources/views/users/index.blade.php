@@ -19,7 +19,7 @@
                                     @endif
                                     <div class="row">
                                         <div class="col-12 text-right">
-                                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-danger">Añadir Usuario</a>
+                                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-facebook">Añadir Usuario</a>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
