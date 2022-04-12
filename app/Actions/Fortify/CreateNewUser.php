@@ -25,6 +25,7 @@ class CreateNewUser implements CreatesNewUsers
             'rut' => ['required', 'string', 'max:255', Rule::unique(User::class)],
             'rol' => ['required', 'string', 'max:255'],
             'establecimiento' => ['required', 'string', 'max:255'],
+            'descripcion' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',
@@ -39,6 +40,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'rol' => $input['rol'],
             'establecimiento' => $input['establecimiento'],
+            'descripcion' => $input['descripcion'],
             'rut' => $input['rut'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),

@@ -105,6 +105,23 @@
                   </div>
                 @endif
               </div>
+            <!-- Descripcion -->
+            <div class="bmd-form-group{{ $errors->has('descripcion') ? ' has-danger' : '' }} mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="material-icons">face</i>
+                    </span>
+                  </div>
+                  <input type="text" name="descripcion" class="form-control" placeholder="{{ __('Descripcion...') }}" value="{{ old('descripcion') }}"
+                  required autocomplete="descripcion">
+                </div>
+                @if ($errors->has('descripcion'))
+                  <div id="rol-error" class="error text-danger pl-3" for="descripcion" style="display: block;">
+                    <strong>{{ $errors->first('descripcion') }}</strong>
+                  </div>
+                @endif
+              </div>
             <!-- Password -->
             <div class="bmd-form-group{{ $errors->has('password') ? ' has-danger' : '' }} mt-3">
               <div class="input-group">

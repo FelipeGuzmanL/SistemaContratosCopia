@@ -16,7 +16,7 @@ class UserController extends Controller
     }
     public function index_referente()
     {
-        $users=User::paginate(5);
+        $users=User::where('rol',3)->paginate(5);
         return view('users.index_referente', compact('users'),['roles'=>Rol::all()]);
     }
 
@@ -28,7 +28,7 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        User::create($request->only('name', 'rut', 'email','rol','establecimiento')
+        User::create($request->only('name', 'rut', 'email','rol','establecimiento','descripcion')
             +[
                 'password' => bcrypt($request->input('password')),
             ]);
@@ -52,7 +52,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user=User::findOrFail($id);
-        $data = $request->only('name','username','email','rol','establecimientos');
+        $data = $request->only('name','username','email','rol','establecimientos','descripcion');
         if(trim($request->password)=='')
         {
             $data=$request->except('password');

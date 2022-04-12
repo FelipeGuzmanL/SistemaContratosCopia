@@ -16,6 +16,7 @@ class AddEstablecimientoToUser extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->unsignedBigInteger('establecimiento');
             $table->foreign('establecimiento')->references('id')->on('establecimientos');
+            $table->string('descripcion');
         });
     }
 

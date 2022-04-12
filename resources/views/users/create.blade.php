@@ -62,6 +62,12 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripcion del usuario" >
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                                 <div class="col-sm-7">
                                     <input type="password" class="form-control" name="password" placeholder="Contraseña" >
