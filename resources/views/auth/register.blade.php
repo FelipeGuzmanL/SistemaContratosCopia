@@ -73,7 +73,38 @@
               @endif
             </div>
             <!-- Rol -->
-
+            <div class="bmd-form-group{{ $errors->has('rol') ? ' has-danger' : '' }} mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="material-icons">face</i>
+                    </span>
+                  </div>
+                  <input type="text" name="rol" class="form-control" placeholder="{{ __('Rol...') }}" value="{{ old('rol') }}" required autocomplete="rol">
+                </div>
+                @if ($errors->has('rol'))
+                  <div id="rol-error" class="error text-danger pl-3" for="rol" style="display: block;">
+                    <strong>{{ $errors->first('rol') }}</strong>
+                  </div>
+                @endif
+              </div>
+            <!-- Establecimiento -->
+            <div class="bmd-form-group{{ $errors->has('establecimiento') ? ' has-danger' : '' }} mt-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="material-icons">face</i>
+                    </span>
+                  </div>
+                  <input type="text" name="establecimiento" class="form-control" placeholder="{{ __('Establecimiento...') }}" value="{{ old('establecimiento') }}"
+                  required autocomplete="establecimiento">
+                </div>
+                @if ($errors->has('establecimiento'))
+                  <div id="rol-error" class="error text-danger pl-3" for="establecimiento" style="display: block;">
+                    <strong>{{ $errors->first('establecimiento') }}</strong>
+                  </div>
+                @endif
+              </div>
             <!-- Password -->
             <div class="bmd-form-group{{ $errors->has('password') ? ' has-danger' : '' }} mt-3">
               <div class="input-group">

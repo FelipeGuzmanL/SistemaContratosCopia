@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Establecimiento;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,12 +17,12 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        return view('users.create',['establecimientos'=>Establecimiento::all()]);
     }
 
     public function store(Request $request)
     {
-        User::create($request->only('name', 'rut', 'email')
+        User::create($request->only('name', 'rut', 'email','rol','establecimiento')
             +[
                 'password' => bcrypt($request->input('password')),
             ]);

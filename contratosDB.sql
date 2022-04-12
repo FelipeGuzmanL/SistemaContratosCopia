@@ -65,3 +65,13 @@ CREATE TABLE aprueba_contrato( --Hereda los datos de la tabla RESOLUCUÓN DE ADJ
     date_make_doc DATE,
 );
 
+insert into establecimientos(id,created_at,updated_at,establecimiento,abreviacion,codigo_deis) values (1,now(),NULL,'Osorno','OS',123);
+
+INSERT INTO establecimientos(id,created_at,updated_at,establecimiento,abreviacion,codigo_deis) VALUES
+(1,now(),NULL,'Servicio Salud Osorno','DSSO',123010),
+(2,now(),NULL,'Hospital Base San José Osorno','HBSJO',123100),
+(3,now(),NULL,'Hospital Futa Sruka Lawenche Kunko Mapu Mo','HFSLKMM',123104),
+(4,now(),NULL,'Hospital Purranque','HPU',123101),
+(5,now(),NULL,'Hospital Pu Mülen Quilacahuín','HPMQ',123105),
+(6,now(),NULL,'Hospital Puerto Octay','HPO',123103),
+(7,now(),NULL,'Hospital Río Negro','HRN',123102);

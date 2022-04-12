@@ -29,7 +29,8 @@
                                                 <th>Nombre</th>
                                                 <th>Correo</th>
                                                 <th>RUT</th>
-                                                <th>Created At</th>
+                                                <th>Rol</th>
+                                                <th>Establecimiento</th>
                                                 <th class="text-right">Acciones</th>
                                             </thead>
                                             <tbody>
@@ -39,7 +40,8 @@
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td>{{ $user->rut }}</td>
-                                                    <td>{{ $user->created_at }}</td>
+                                                    <td>{{ $user->rol }}</td>
+                                                    <td>{{ $user->getEstablecimiento->establecimiento }}</td>
                                                     <td class="td-actions text-right">
                                                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
                                                         <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
