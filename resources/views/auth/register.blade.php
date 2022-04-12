@@ -72,6 +72,8 @@
                 </div>
               @endif
             </div>
+            <!-- Rol -->
+
             <!-- Password -->
             <div class="bmd-form-group{{ $errors->has('password') ? ' has-danger' : '' }} mt-3">
               <div class="input-group">
