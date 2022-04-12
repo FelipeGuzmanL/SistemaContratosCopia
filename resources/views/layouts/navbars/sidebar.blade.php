@@ -24,7 +24,7 @@
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'referentes' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('referentes.index_referente') }}">
           <i class="material-icons">person</i>
             <p>Referentes</p>
         </a>

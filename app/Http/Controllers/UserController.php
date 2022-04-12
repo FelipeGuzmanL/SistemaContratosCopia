@@ -14,6 +14,11 @@ class UserController extends Controller
         $users=User::paginate(5);
         return view('users.index', compact('users'));
     }
+    public function index_referente()
+    {
+        $users=User::paginate(5);
+        return view('users.index_referente', compact('users'),['roles'=>Rol::all()]);
+    }
 
 
     public function create()

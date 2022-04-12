@@ -27,3 +27,4 @@ Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name
 Route::get('users/{user}', [App\Http\Controllers\UserController::class, 'show'])->name('users.show');
 Route::get('users/{user}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
 Route::put('users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+Route::get('referentes', [App\Http\Controllers\UserController::class, 'index_referente'])->name('referentes.index_referente');
