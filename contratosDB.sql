@@ -67,7 +67,7 @@ CREATE TABLE aprueba_contrato( --Hereda los datos de la tabla RESOLUCUÓN DE ADJ
 
 insert into establecimientos(id,created_at,updated_at,establecimiento,abreviacion,codigo_deis) values (1,now(),NULL,'Osorno','OS',123);
 
-INSERT INTO establecimientos(id,created_at,updated_at,establecimiento,abreviacion,codigo_deis) VALUES
+INSERT INTO establecimientos(id,created_at,updated_at,establecimiento,abreviacion,codigo_deis) VALUES --Se insertan los establecimientos a la base de datos de forma manual
 (1,now(),NULL,'Servicio Salud Osorno','DSSO',123010),
 (2,now(),NULL,'Hospital Base San José Osorno','HBSJO',123100),
 (3,now(),NULL,'Hospital Futa Sruka Lawenche Kunko Mapu Mo','HFSLKMM',123104),
@@ -75,3 +75,8 @@ INSERT INTO establecimientos(id,created_at,updated_at,establecimiento,abreviacio
 (5,now(),NULL,'Hospital Pu Mülen Quilacahuín','HPMQ',123105),
 (6,now(),NULL,'Hospital Puerto Octay','HPO',123103),
 (7,now(),NULL,'Hospital Río Negro','HRN',123102);
+
+INSERT INTO roles(id,created_at,updated_at,roles) VALUES --Creamos los roles en al base de datos de forma manual
+(1,now(),NULL,'Super Administrador'),(2,now(),NULL,'Administrador'),(3,now(),NULL,'Referente');
+
+

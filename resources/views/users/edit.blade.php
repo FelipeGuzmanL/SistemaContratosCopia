@@ -37,6 +37,32 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <label for="rol" class="col-sm-2 col-form-label">Establecimiento</label>
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Seleccionar Establecimiento</label>
+                                        <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" name="establecimiento">
+                                          @foreach ( $establecimientos as $establecimiento )
+                                            <option value="{{ $establecimiento->id }}" {{ $user->establecimiento == $establecimiento->id ? 'selected' : '' }}>{{ $establecimiento->establecimiento }}</option>
+                                          @endforeach
+                                        </select>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="rol" class="col-sm-2 col-form-label">Rol</label>
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Seleccionar Rol</label>
+                                        <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" name="rol">
+                                        @foreach ( $roles as $rol )
+                                            <option value="{{ $rol->id }}" {{ $user->rol == $rol->id ? 'selected' : '' }}>{{ $rol->roles }}</option>
+                                        @endforeach
+                                        </select>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                                 <div class="col-sm-7">
                                     <input type="password" class="form-control" name="password" placeholder="Ingresar contraseña solo en caso de editar..." >

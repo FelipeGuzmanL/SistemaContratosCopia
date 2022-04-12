@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Establecimiento;
+use App\Models\Rol;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -17,7 +18,7 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create',['establecimientos'=>Establecimiento::all()]);
+        return view('users.create',['establecimientos'=>Establecimiento::all(),'roles'=>Rol::all()]);
     }
 
     public function store(Request $request)
@@ -40,13 +41,13 @@ class UserController extends Controller
     {
         //$user = User::findOrFail($id);
         //dd($user);
-        return view('users.edit', compact('user'));
+        return view('users.edit', compact('user'),['establecimientos'=>Establecimiento::all(),'roles'=>Rol::all()]);
     }
 
     public function update(Request $request, $id)
     {
         $user=User::findOrFail($id);
-        $data = $request->only('name','username','email');
+        $data = $request->only('name','username','email','rol','establecimientos');
         if(trim($request->password)=='')
         {
             $data=$request->except('password');
@@ -56,7 +57,7 @@ class UserController extends Controller
             $data['password']=bcrypt($request->password);
         }
         $user->update($data);
-        return redirect()->back();
+        return redirect()->action([UserController::class, 'index'])->with('success', 'Usuario editado correctamente.');
     }
 
 }

@@ -54,9 +54,9 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Seleccionar Rol</label>
                                         <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" name="rol">
-                                          <option value="Super Admin">Super Administrador</option>
-                                          <option value="Administrador">Administrador</option>
-                                          <option value="Referente">Referente</option>
+                                        @foreach ( $roles as $rol )
+                                            <option value="{{ $rol->id }}">{{ $rol->roles }}</option>
+                                        @endforeach
                                         </select>
                                       </div>
                                 </div>
