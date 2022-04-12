@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    /*return view('welcome');*/ /*Si quieres habilitar la pagina de bienvenida con registro, descomentar esto y comentas la linea 19*/
-    return redirect()->route('login');
+    return view('welcome'); /*Si quieres habilitar la pagina de bienvenida con registro, descomentar esto y comentas la linea 19*/
+    /*return redirect()->route('login');*/
 });
 
 
