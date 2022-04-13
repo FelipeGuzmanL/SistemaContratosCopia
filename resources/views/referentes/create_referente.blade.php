@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'usuarios', 'titlePage' => 'Nuevo Usuario'])
+@extends('layouts.main', ['activePage' => 'referentes', 'titlePage' => 'Nuevo Referente'])
 @section('content')
 <div class="content">
     <div class="container-fluid">
@@ -54,9 +54,7 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Seleccionar Rol</label>
                                         <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" name="rol">
-                                        @foreach ( $roles as $rol )
-                                            <option value="{{ $rol->id }}">{{ $rol->roles }}</option>
-                                        @endforeach
+                                            <option value="3">Referente</option>
                                         </select>
                                       </div>
                                 </div>

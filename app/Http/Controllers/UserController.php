@@ -46,7 +46,7 @@ class UserController extends Controller
             +[
                 'password' => bcrypt($request->input('password')),
             ]);
-        return redirect()->action([UserController::class, 'index'])->with('success', 'Referente creado correctamente.');
+        return redirect()->action([UserController::class, 'index_referente'])->with('success', 'Referente creado correctamente.');
     }
 
     public function Show(User $user)
