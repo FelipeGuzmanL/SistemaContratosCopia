@@ -19,7 +19,7 @@
                                     @endif
                                     <div class="row">
                                         <div class="col-12 text-right">
-                                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-facebook">Añadir Referente</a>
+                                            <a href="{{ route('referentes.create_referente') }}" class="btn btn-sm btn-facebook">Añadir Referente</a>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
@@ -43,8 +43,8 @@
                                                     <td>{{ $user->getEstablecimiento->establecimiento }}</td>
                                                     <td>{{ $user->getRol->roles }}</td>
                                                     <td class="td-actions text-right">
-                                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
-                                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
+                                                        <a href="{{ route('referentes.show_referente', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
+                                                        <a href="{{ route('referentes.edit_referente', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
                                                         <button class="btn btn-sm btn-danger" type="button">
                                                             <i class="material-icons">close</i>
                                                         </button>

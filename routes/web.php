@@ -28,3 +28,8 @@ Route::get('users/{user}', [App\Http\Controllers\UserController::class, 'show'])
 Route::get('users/{user}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
 Route::put('users/{user}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
 Route::get('referentes', [App\Http\Controllers\UserController::class, 'index_referente'])->name('referentes.index_referente');
+Route::get('/referentes/create', [App\Http\Controllers\UserController::class, 'create_referente'])->name('referentes.create_referente');
+Route::post('/referentes', [App\Http\Controllers\UserController::class, 'store_referente'])->name('referentes.store_referente');
+Route::get('referentes/{user}', [App\Http\Controllers\UserController::class, 'show_referente'])->name('referentes.show_referente');
+Route::get('referentes/{user}/edit', [App\Http\Controllers\UserController::class, 'edit_referente'])->name('referentes.edit_referente');
+Route::put('referentes/{user}', [App\Http\Controllers\UserController::class, 'update_referente'])->name('referentes.update_referente');
